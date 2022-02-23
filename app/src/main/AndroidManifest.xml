@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.linaqruf.portalakademik">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PortalAkademik">
+        <activity
+            android:name=".ihs.IHSActivity"
+            android:exported="true" />
+        <activity
+            android:name=".irs.IRSActivity"
+            android:exported="true" />
         <activity
             android:name=".profile.ProfileActivity"
             android:exported="true" />

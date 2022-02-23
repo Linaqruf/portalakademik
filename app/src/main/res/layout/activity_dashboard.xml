@@ -63,6 +63,7 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginTop="152dp"
+        android:paddingBottom="10dp"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -122,10 +123,13 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemdashboard"
         android:layout_width="350dp"
         android:layout_height="253dp"
+        android:layout_marginTop="10dp"
+
+        app:cardCornerRadius="25dp"
         android:layout_below="@id/cardSKS"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,17 +137,141 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardSKS"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_dashboard" />
+        tools:listitem="@layout/item_dashboard">
+
+        <LinearLayout
+            android:id="@+id/item_list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                 <LinearLayout
+                    android:id="@+id/menuIrs"
+                    android:orientation="vertical"
+                    android:layout_width="175dp"
+                    android:layout_height="126.5dp"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/flat_black"
+                        android:textSize="14sp"
+                        android:text="Isian Rencana Semester"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/menuIhs"
+                    android:orientation="vertical"
+                    android:layout_width="175dp"
+                    android:layout_height="126.5dp"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/flat_black"
+                        android:textSize="14sp"
+                        android:text="Lembaran Hasil Semester"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/menuSipKp"
+                    android:orientation="vertical"
+                    android:layout_width="175dp"
+                    android:layout_height="126.5dp"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/flat_black"
+                        android:textSize="14sp"
+                        android:text="SIP-KP"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/menuTA"
+                    android:orientation="vertical"
+                    android:layout_width="175dp"
+                    android:layout_height="126.5dp"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/flat_black"
+                        android:textSize="14sp"
+                        android:text="SIM-TA"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="200dp"
         app:cardCornerRadius="25dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_menu"
+        app:layout_constraintTop_toBottomOf="@+id/itemdashboard"
         app:layout_constraintVertical_bias="0.0">
         <TextView
             android:id="@+id/agendahariini"
@@ -159,6 +287,7 @@
             android:id="@+id/rv_agenda"
             android:layout_width="351dp"
             android:layout_height="match_parent"
+
             android:paddingLeft="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="20dp"

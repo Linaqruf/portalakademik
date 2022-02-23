@@ -9,7 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import com.linaqruf.portalakademik.LoginActivity;
+import com.linaqruf.portalakademik.ihs.IHSActivity;
+import com.linaqruf.portalakademik.irs.IRSActivity;
 import com.linaqruf.portalakademik.profile.ProfileActivity;
 import com.linaqruf.portalakademik.R;
 import com.linaqruf.portalakademik.dashboard.agenda.AgendaAdapter;
@@ -19,17 +23,16 @@ import java.util.ArrayList;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    RecyclerView recyclerViewMenu;
     RecyclerView recyclerViewAgenda;
 
     ArrayList<SetterGetter> datamenu;
     ArrayList<SetterGetterAgenda> agenda;
-    GridLayoutManager gridLayoutManager;
     LinearLayoutManager linearLayoutManager;
-    DashBoardAdapter adapterMenu;
     AgendaAdapter adapterAgenda;
-//
+    //
     ImageView imgProfile;
+
+    LinearLayout menuIrs, menuIhs, menuSipKp, menuTA;
 
 
     @Override
@@ -37,16 +40,9 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        recyclerViewMenu        =   findViewById(R.id.rv_menu);
         recyclerViewAgenda        =   findViewById(R.id.rv_agenda);
 
-//      MENU
-        addData();
-        gridLayoutManager   =   new GridLayoutManager(this, 2);
-        recyclerViewMenu.setLayoutManager(gridLayoutManager);
-        adapterMenu             =   new DashBoardAdapter(datamenu);
-        recyclerViewMenu.setAdapter(adapterMenu);
-
+//
 //      AGENDA
         addAgenda();
         linearLayoutManager   =   new LinearLayoutManager(DashboardActivity.this);
@@ -63,17 +59,42 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        menuIrs =findViewById(R.id.menuIrs);
+        menuIhs =findViewById(R.id.menuIhs);
+        menuSipKp =findViewById(R.id.menuSipKp);
+        menuTA =findViewById(R.id.menuTA);
+
+        menuIrs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, IRSActivity.class);
+                startActivity(intent);
+            }
+        });
+        menuIhs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, IHSActivity.class);
+                startActivity(intent);
+            }
+        });
+        menuSipKp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        menuTA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    public void addData(){
-        datamenu            =   new ArrayList<>();
-        datamenu.add(new SetterGetter(
-                "Isian Rencana Semester",
-                "logomenu1"));
-        datamenu.add(new SetterGetter("Lembar Hasil Semester", "logomenu2"));
-        datamenu.add(new SetterGetter("Kerja Praktek", "logomenu3"));
-        datamenu.add(new SetterGetter("Tugas Akhir", "logomenu4"));
-    }
 
     private void addAgenda() {
         agenda            =   new ArrayList<>();

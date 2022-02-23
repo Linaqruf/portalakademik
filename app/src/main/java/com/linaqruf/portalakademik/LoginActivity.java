@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.linaqruf.portalakademik.dashboard.DashboardActivity;
+import com.linaqruf.portalakademik.ihs.IHSActivity;
+import com.linaqruf.portalakademik.irs.IRSActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
