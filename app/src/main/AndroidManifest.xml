@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PortalAkademik">
         <activity
+            android:name=".ubahpassword.UbahPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ubahpassword.UbahPasswordActivity2"
+            android:exported="true" />
+        <activity
             android:name=".ihs.IHSActivity"
             android:exported="true" />
         <activity

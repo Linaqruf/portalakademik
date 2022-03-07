@@ -11,4 +11,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="portal">Portal Akademik</string>
     <string name="unand">Universitas Andalas</string>
+    <string name="welcomeText">Selamat Datang, di</string>
+    <string name="getStarted">Get Started</string>
 </resources>
