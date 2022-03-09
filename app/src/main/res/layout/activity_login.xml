@@ -85,8 +85,6 @@
              />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <TextView
         android:id="@+id/txUnand2"
         android:layout_width="match_parent"
@@ -107,13 +105,14 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginbtn3"
-        android:layout_width="163dp"
-        android:layout_height="53dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button"
         android:fontFamily="@font/regular"
-        android:text="Login"
+        android:text="Sign in"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

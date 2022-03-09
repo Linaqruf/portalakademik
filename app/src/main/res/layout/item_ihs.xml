@@ -4,90 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardItemRiwayat"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="20dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="20dp"
     >
-
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMatkul"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingEnd="20dp"
+        android:padding="20sp">
 
-        <TextView
-            android:id="@+id/txKodeMatkul"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/iv_logo_menu"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:fontFamily="@font/regular"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            android:src="@drawable/user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/matkul"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/relativeIHS"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:text="Kode Mata Kuliah"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            android:layout_marginStart="70dp"
+            android:layout_toEndOf="@+id/iv_logo_menu"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_menu"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/txMatkul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txKodeMatkul"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/regular"
-            android:gravity="right"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/txMatkul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="Mata Kuliah"
+                android:textColor="@color/flat_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/txKodeMatkul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txMatkul"
+                android:fontFamily="@font/regular"
+                android:gravity="right"
+                android:text="Kode Mata Kuliah"
+                android:textColor="@color/darker_grey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txNilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txMatkul"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-22dp"
+                android:layout_marginEnd="1dp"
+                android:fontFamily="@font/bold"
+                android:gravity="right"
+                android:text="A"
+                android:textColor="@color/flat_black"
+                android:textSize="24dp" />
+        </RelativeLayout>
 
 
-        <TextView
-            android:id="@+id/Status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/matkul"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/regular"
-            android:gravity="right"
-            android:text="Mata Kuliah"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/txNilai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Status"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/regular"
-            android:gravity="right"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Status"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/regular"
-            android:text="Nilai"
-            android:textColor="@android:color/black"
-            android:textSize="12sp" />
 
-    </RelativeLayout>
+
+
+
 
 
 </androidx.cardview.widget.CardView>

@@ -59,23 +59,23 @@ public class IHSActivity extends AppCompatActivity {
         ihs.add(new SetterGetterIHS(
                 "TSI101",
                 "Bahasa Pemrograman Web",
-                "A"));
+                "B"));
         ihs.add(new SetterGetterIHS(
                 "TSI101",
                 "Bahasa Pemrograman Web",
-                "A"));
+                "B+"));
         ihs.add(new SetterGetterIHS(
                 "TSI101",
                 "Bahasa Pemrograman Web",
-                "A"));
+                "C"));
         ihs.add(new SetterGetterIHS(
                 "TSI101",
                 "Bahasa Pemrograman Web",
-                "A"));
+                "D"));
         ihs.add(new SetterGetterIHS(
                 "TSI101",
                 "Bahasa Pemrograman Web",
-                "A"));
+                "E"));
     }
 
 

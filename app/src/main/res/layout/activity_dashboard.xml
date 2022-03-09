@@ -264,7 +264,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         app:cardCornerRadius="25dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -281,17 +281,19 @@
             android:gravity="center"
             android:textColor="@color/flat_black"
             android:fontFamily="@font/bold"
+            android:textSize="18sp"
             android:paddingTop="10dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_agenda"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/darker_grey"
+            android:scrollbarSize="2dp"
+            android:scrollbarStyle="insideOverlay"
             android:layout_width="351dp"
             android:layout_height="match_parent"
-
-            android:paddingLeft="20dp"
-            android:paddingTop="30dp"
-            android:paddingBottom="20dp"
-            android:paddingRight="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.483"

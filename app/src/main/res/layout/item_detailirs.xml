@@ -10,64 +10,43 @@
     android:layout_marginRight="20dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="20dp"
->
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20sp">
 
-        <ImageView
-            android:id="@+id/iv_logo_menu"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/user"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_toEndOf="@+id/iv_logo_menu"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_logo_menu"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/txMatkul"
-                android:layout_width="wrap_content"
+                android:id="@+id/txMingguKe"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold"
-                android:text="Mata Kuliah"
+                android:text="Minggu ke"
                 android:textColor="@color/flat_black"
                 android:textSize="16dp" />
 
+
             <TextView
-                android:id="@+id/txJadwal"
-                android:layout_width="wrap_content"
+                android:id="@+id/txDetail"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txMatkul"
+                android:layout_below="@id/txMingguKe"
                 android:fontFamily="@font/regular"
-                android:gravity="right"
-                android:text="Jadwal"
+                android:text="Membuat website menggunakan pemrograman PHP"
                 android:textColor="@color/darker_grey"
                 android:textSize="16sp" />
 
 
-            <TextView
-                android:id="@+id/txDosenPengampu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txJadwal"
-                android:fontFamily="@font/thin"
-                android:gravity="right"
-                android:text="Dosen Pengampu"
-                android:textColor="@color/flat_black"
-                android:textSize="14sp" />
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
